@@ -1,13 +1,21 @@
 import React from 'react';
-
+import { Router } from "react-router-dom";
 // MUI
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme";
 
+// Routes
+import Routes from "./Routes";
+
+// helpers
+import { history } from "./helpers";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <h1>Hi</h1>
+      <Router history={history}>
+        <Routes />
+      </Router>
     </ThemeProvider>
   );
 }
