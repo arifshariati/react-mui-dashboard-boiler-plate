@@ -34,7 +34,7 @@ const Profile = (props) => {
     const user = {
         name: "Arif Shariati",
         avatar: "/assets/images/profile-image.png",
-        role: "client",
+        role: "Administrator",
     };
 
     return (
@@ -48,10 +48,11 @@ const Profile = (props) => {
             <Typography className={classes.name} variant="h4">
                 {user.name}
             </Typography>
-                {user.role === 'client' 
-                ? <Typography variant="body2">Firma Yetkilisi</Typography>
-                : <Typography variant="body2">{user.role}</Typography>
-                }
+
+            <Typography className={classes.name} variant="body2">
+                {user.role}
+            </Typography>
+                
         </div>
     );
 };

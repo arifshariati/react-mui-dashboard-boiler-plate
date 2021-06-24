@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 // Components
 import { Topbar } from "./components";
-import { Snackbar, Backdrop } from "../../components";
 
 // MUI
 import { makeStyles } from "@material-ui/styles";
@@ -27,8 +26,6 @@ const Minimal = (props) => {
     return (
         <div className={classes.root}>
             <Topbar />
-            <Snackbar />
-            <Backdrop />
             <main className={classes.content}>{children}</main>
         </div>
     );

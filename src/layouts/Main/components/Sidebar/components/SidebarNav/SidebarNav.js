@@ -49,22 +49,22 @@ const CustomRouterLink = forwardRef((props, ref) => (
 ));
 
 const SidebarNav = (props) => {
-    const { pages, className, ...rest } = props;
+    const { navList, className, ...rest } = props;
 
     const classes = useStyles();
 
     return (
         <List {...rest} className={clsx(classes.root, className)}>
-            {pages.map((page) => (
-                <ListItem className={classes.item} disableGutters key={page.title}>
+            {navList.map((navItem) => (
+                <ListItem className={classes.item} disableGutters key={navItem.title}>
                 <Button
                     activeClassName={classes.active}
                     className={classes.button}
                     component={CustomRouterLink}
-                    to={page.href}
+                    to={navItem.href}
                 >
-                    <div className={classes.icon}>{page.icon}</div>
-                    {page.title}
+                    <div className={classes.icon}>{navItem.icon}</div>
+                    {navItem.title}
                 </Button>
                 </ListItem>
             ))}

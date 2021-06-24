@@ -1,14 +1,18 @@
 import React from 'react';
-import { Switch, Redirect, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 // Layouts
 import {
-  Main as MainLayout,
-  Minimal as MinimalLayout
+  Main as MainLayout
 } from './layouts';
 
 // Components
-import { Sample, RouteWithLayout, PrivateRouteWithLayout } from './components';
+import { RouteWithLayout } from './components';
+
+// Views
+import {
+  Dashboard as DashboardView
+} from './views';
 
 const Routes = () => {
   return (
@@ -17,8 +21,8 @@ const Routes = () => {
 
       <RouteWithLayout
         exact
-        path='/sample'
-        component={Sample}
+        path='/dashboard'
+        component={DashboardView}
         layout={MainLayout}
       />
 

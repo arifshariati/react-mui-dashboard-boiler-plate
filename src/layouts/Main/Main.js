@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
@@ -6,8 +6,6 @@ import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import { useMediaQuery } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
-
-import { Backdrop, Snackbar } from '../../components'
 
 import { Sidebar, Topbar } from "./components";
 
@@ -57,15 +55,6 @@ const Main = (props) => {
 
   const shouldOpenSidebar = isDesktop ? true : openSidebar;
 
-  if (!authedUser) {
-    return (
-      <>
-        <Snackbar />
-        <Backdrop />
-      </>
-    );
-  }
-
   return (
     <div
       className={clsx({
@@ -81,8 +70,6 @@ const Main = (props) => {
         variant={isDesktop ? "persistent" : "temporary"}
         authedUserRole={authedUser.user_role}
       />
-      <Snackbar />
-      <Backdrop />
       <main className={classes.content}>{children}</main>
     </div>
   );

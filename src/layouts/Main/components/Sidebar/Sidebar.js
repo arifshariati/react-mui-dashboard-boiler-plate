@@ -8,15 +8,10 @@ import { Divider, Drawer } from "@material-ui/core";
 
 //Icons
 import DashboardIcon from "@material-ui/icons/Dashboard";
-import AccountBoxIcon from "@material-ui/icons/AccountBox";
-import BusinessIcon from '@material-ui/icons/Business';
-import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-import FindInPageIcon from '@material-ui/icons/FindInPage';
-import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import SearchIcon from '@material-ui/icons/Search';
 
 //Components
 import { Profile, SidebarNav } from "./components";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -51,56 +46,21 @@ const Sidebar = ({
 }) => {
   const classes = useStyles();
 
-  let pages = [
+  let components = [
     {
-      title: "Panel",
+      title: "Dashboard",
       href: "/dashboard",
       icon: <DashboardIcon />,
-    },
-    {
-      title: "Hesabım",
-      href: "/account",
-      icon: <AccountBoxIcon />,
-    },
-    /*     {
-          title: "Settings",
-          href: "/settings",
-          icon: <SettingsIcon />,
-        }, */
-    {
-      title: "Şirket Yönetimi",
-      href: "/company-management",
-      icon: <BusinessIcon />,
-    },
-    {
-      title: "Marka Yönetimi",
-      href: "/brand-management",
-      icon: <LocalOfferIcon />,
-    },
-    {
-      title: "Toplu İzin Yönetimi",
-      href: "/bulk-consent-control",
-      icon: <FindInPageIcon />,
-    },
-    {
-      title: "Tekil İzin Sorgulama",
-      href: "/single-consent-check",
-      icon: <SearchIcon />,
-    },
-    /*     {
-          title: "Reconciliation",
-          href: "/reconciliation",
-          icon: <PersonIcon />,
-        }, */
+    }
   ];
 
-  const adminPages = [
+  let views = [
     {
-      title: "Davet Paneli",
-      href: "/invitation-list",
-      icon: <GroupAddIcon />,
+      title: "Dashboard",
+      href: "/dashboard",
+      icon: <DashboardIcon />,
     }
-  ]
+  ];
 
   return (
     <Drawer
@@ -113,11 +73,17 @@ const Sidebar = ({
       <div {...rest} className={clsx(classes.root, className)}>
         <Profile />
         <Divider className={classes.divider} />
+        <Typography variant="h5">Components</Typography>
         <SidebarNav 
           className={classes.nav}
-          pages={authedUserRole === 'systemAdmin' 
-            ? pages.concat(adminPages)
-            : pages } />
+          navList={components} 
+        />
+        <Divider className={classes.divider} />
+        <Typography variant="h5">Views</Typography>
+        <SidebarNav 
+          className={classes.nav}
+          navList={views} 
+        />
       </div>
     </Drawer>
   );
