@@ -2,6 +2,7 @@
 
 This boilerplate provides minimal functionality of a dashboard to be developed in React and Material UI. 
 
+> **_NOTE:_** This Repo is still under development. I will be updating time to time. Keep with pace.
 # Design Wireframe 
     ... To be updated 
 # Layouts

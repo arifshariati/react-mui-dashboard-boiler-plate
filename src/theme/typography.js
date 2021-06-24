@@ -2,7 +2,7 @@ import palette from "./palette";
 
 const typography = {
     fontFamily: [
-        'Ubuntu'
+        'Montserrat'
     ].join(','),
     h1: {
         color: palette.text.primary,

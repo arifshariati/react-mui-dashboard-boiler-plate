@@ -8,14 +8,14 @@ import {
 } from './layouts';
 
 // Components
-import { Sample } from './components';
+import { Sample, RouteWithLayout, PrivateRouteWithLayout } from './components';
 
 const Routes = () => {
   return (
 
     <Switch>
 
-      <Route
+      <RouteWithLayout
         exact
         path='/sample'
         component={Sample}
