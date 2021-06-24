@@ -3,12 +3,16 @@ import { Link as RouterLink } from "react-router-dom";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/styles";
-import { AppBar, Toolbar } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         boxShadow: "none",
     },
+    logo:{
+        color: theme.palette.white,
+        fontWeight:"bold"
+    }
 }));
 
 const Topbar = (props) => {
@@ -24,12 +28,8 @@ const Topbar = (props) => {
             position="fixed"
         >
         <Toolbar>
-          <RouterLink style={{ textDecoration: 'none', color:'inherit', marginTop: '2px'}} to="/">
-                <img 
-                    alt='KNS Logo' 
-                    src={window.location.origin+'/kns-iys-logo-white.svg'} 
-                    height='35rem'
-                />
+            <RouterLink style={{ textDecoration: 'none', color:'inherit', marginTop: '2px'}} to="/">
+                <Typography variant="h3" className={classes.logo}>Boilerplate</Typography>
             </RouterLink>
         </Toolbar>
         </AppBar>

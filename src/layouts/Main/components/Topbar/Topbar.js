@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 //MUI
 import { makeStyles } from "@material-ui/styles";
-import { AppBar, Toolbar, Hidden, IconButton } from "@material-ui/core";
+import { AppBar, Toolbar, Hidden, IconButton, Typography } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import InputIcon from "@material-ui/icons/Input";
 
@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     signOutButton: {
         marginLeft: theme.spacing(1),
     },
+    logo:{
+        color: theme.palette.white,
+        fontWeight:"bold"
+    }
 }));
 
 const Topbar = (props) => {
@@ -32,18 +36,14 @@ const Topbar = (props) => {
         <AppBar {...rest} className={clsx(classes.root, className)}>
             <Toolbar>
                 <RouterLink style={{ textDecoration: 'none', color:'inherit', marginTop: '2px'}} to="/">
-                    <img 
-                        alt='KNS Logo' 
-                        src={window.location.origin+'/kns-iys-logo-white.svg'} 
-                        height='35rem'
-                    />
+                    <Typography variant="h3" className={classes.logo}>Boilerplate</Typography>
                 </RouterLink>
                 <div className={classes.flexGrow} />
                 <Hidden mdDown>
                     <IconButton
-                     className={classes.signOutButton}
-                      onClick={onSignOut} 
-                      color="inherit">
+                        className={classes.signOutButton}
+                        onClick={onSignOut} 
+                        color="inherit">
                         <InputIcon />
                     </IconButton>
                 </Hidden>
