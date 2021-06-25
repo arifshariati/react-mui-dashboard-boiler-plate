@@ -55,6 +55,11 @@ const Sidebar = ({
       icon: <DashboardIcon />,
     },
     {
+      title: "Sign In",
+      href: "/login",
+      icon: <DashboardIcon />,
+    },
+    {
       title: "Not Found",
       href: "/not-found",
       icon: <NotInterestedIcon />,

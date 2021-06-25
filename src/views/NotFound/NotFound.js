@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Grid, Typography, Button, Link } from "@material-ui/core";
-
+import { Link as RouterLink } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(4),
@@ -43,7 +43,7 @@ const NotFound = () => {
                     />
                 </Grid>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                    <Link href="/dashboard">
+                    <Link to="/dashboard" component={RouterLink}>
                         <Button variant="contained" color="primary">Go Back</Button>
                     </Link>
                 </Grid>

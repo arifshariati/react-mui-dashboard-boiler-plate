@@ -14,6 +14,7 @@ import { RouteWithLayout } from './components';
 import {
   Dashboard as DashboardView,
   NotFound as NotFoundView,
+  Login as LoginView
 } from './views';
 
 const Routes = () => {
@@ -27,6 +28,13 @@ const Routes = () => {
         path='/dashboard'
         component={DashboardView}
         layout={MainLayout}
+      />
+
+      <RouteWithLayout
+        component={LoginView}
+        exact
+        layout={MinimalLayout}
+        path="/login"
       />
 
       <RouteWithLayout
