@@ -1,9 +1,10 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 
 // Layouts
 import {
-  Main as MainLayout
+  Main as MainLayout,
+  Minimal as MinimalLayout
 } from './layouts';
 
 // Components
@@ -11,7 +12,8 @@ import { RouteWithLayout } from './components';
 
 // Views
 import {
-  Dashboard as DashboardView
+  Dashboard as DashboardView,
+  NotFound as NotFoundView,
 } from './views';
 
 const Routes = () => {
@@ -19,6 +21,7 @@ const Routes = () => {
 
     <Switch>
 
+      {/*  Views */}
       <RouteWithLayout
         exact
         path='/dashboard'
@@ -26,6 +29,14 @@ const Routes = () => {
         layout={MainLayout}
       />
 
+      <RouteWithLayout
+        component={NotFoundView}
+        exact
+        layout={MinimalLayout}
+        path="/not-found"
+      />
+
+      <Redirect to='/not-found' />
     </Switch>
   );
 };

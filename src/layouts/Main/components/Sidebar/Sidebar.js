@@ -8,6 +8,7 @@ import { Divider, Drawer } from "@material-ui/core";
 
 //Icons
 import DashboardIcon from "@material-ui/icons/Dashboard";
+import NotInterestedIcon from '@material-ui/icons/NotInterested';
 
 //Components
 import { Profile, SidebarNav } from "./components";
@@ -44,21 +45,19 @@ const Sidebar = ({
   authedUserRole,
   ...rest
 }) => {
+  
   const classes = useStyles();
-
-  let components = [
-    {
-      title: "Dashboard",
-      href: "/dashboard",
-      icon: <DashboardIcon />,
-    }
-  ];
 
   let views = [
     {
       title: "Dashboard",
       href: "/dashboard",
       icon: <DashboardIcon />,
+    },
+    {
+      title: "Not Found",
+      href: "/not-found",
+      icon: <NotInterestedIcon />,
     }
   ];
 
@@ -73,12 +72,7 @@ const Sidebar = ({
       <div {...rest} className={clsx(classes.root, className)}>
         <Profile />
         <Divider className={classes.divider} />
-        <Typography variant="h5">Components</Typography>
-        <SidebarNav 
-          className={classes.nav}
-          navList={components} 
-        />
-        <Divider className={classes.divider} />
+      
         <Typography variant="h5">Views</Typography>
         <SidebarNav 
           className={classes.nav}

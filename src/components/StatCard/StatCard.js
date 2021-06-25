@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme)=>({
     }
 }));
 
+
 const StatCard = ({data, bgColor, color}) => {
     const classes = useStyles({bgColor, color});
 
