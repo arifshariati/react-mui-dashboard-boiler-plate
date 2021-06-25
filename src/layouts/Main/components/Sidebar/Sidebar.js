@@ -9,6 +9,7 @@ import { Divider, Drawer } from "@material-ui/core";
 //Icons
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 //Components
 import { Profile, SidebarNav } from "./components";
@@ -55,9 +56,14 @@ const Sidebar = ({
       icon: <DashboardIcon />,
     },
     {
+      title: "Sign Up",
+      href: "/signup",
+      icon: <LockOpenIcon />,
+    },
+    {
       title: "Sign In",
       href: "/login",
-      icon: <DashboardIcon />,
+      icon: <LockOpenIcon />,
     },
     {
       title: "Not Found",

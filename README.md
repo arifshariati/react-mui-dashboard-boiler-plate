@@ -27,8 +27,9 @@ This Layout contains TopBar and Main Section. However, based on your requirement
 So far below views has been added, which i think are part of boilerplat for which any developer getting started with dashboard should not re-develop each time.
 
     1.  Dashboard (At the moment with StatCard component only. Will add chart based components in near future)
-    2.  Login 
-    3.  Not Found Page
+    2.  Signup
+    3.  Login 
+    4.  Not Found Page
 
 ## Global Theme 
 
