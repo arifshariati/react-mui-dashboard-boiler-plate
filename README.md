@@ -1,10 +1,9 @@
 # React Material UI Dashboard Boilerplate
 
-This boilerplate provides minimal functionality of a dashboard to be developed in React and Material UI. 
+This boilerplate provides minimal functionality of a dashboard to be developed in React and Material UI. Here is how it looks [DEMO](https://react-mui-dashboard-boilerplate.netlify.app)
 
 > **_NOTE:_** This Repo is still under development. I will be updating time to time. Keep with pace.
-## Design Wireframe 
-    ... To be updated 
+
 ## Layouts
 For this repository two basic layouts have been implemented such as;
 1.  Main Layout
