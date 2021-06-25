@@ -66,6 +66,11 @@ const Sidebar = ({
       icon: <LockOpenIcon />,
     },
     {
+      title: "Reset Password",
+      href: "/reset-password",
+      icon: <LockOpenIcon />,
+    },
+    {
       title: "Not Found",
       href: "/not-found",
       icon: <NotInterestedIcon />,

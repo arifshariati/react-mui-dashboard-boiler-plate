@@ -15,7 +15,8 @@ import {
   Dashboard as DashboardView,
   NotFound as NotFoundView,
   Login as LoginView,
-  Signup as SignupView
+  Signup as SignupView,
+  ResetPassword as ResetPasswordView
 } from './views';
 
 const Routes = () => {
@@ -43,6 +44,13 @@ const Routes = () => {
         exact
         layout={MinimalLayout}
         path="/login"
+      />
+
+      <RouteWithLayout
+        component={ResetPasswordView}
+        exact
+        layout={MinimalLayout}
+        path="/reset-password"
       />
 
       <RouteWithLayout
